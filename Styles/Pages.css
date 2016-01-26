@@ -1,0 +1,131 @@
+﻿.homepagemainleft
+{ 
+   float:left;
+   width:250px;
+  
+   
+}
+
+.homepagemaincenter
+{
+    border: thick groove #000000;
+    float: left;
+    width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.homepagemainright
+{
+    float:left;
+    width: 250px;
+    height: 16px;
+}
+
+.homepageheader
+{
+    font-size:xx-large;
+    font-family:Copperplate Gothic Bold;
+}
+
+.categoryleft
+{
+    width:30%;
+    float:left;
+    background-color:Beige; 
+    
+}
+
+.categorycenter
+{
+    width: 30%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-right-style: dotted;
+    border-left-style: dotted;
+    border-right-width: medium;
+    border-left-width: medium;
+    border-right-color: #C0C0C0;
+    border-left-color: #C0C0C0;
+    background-color:Beige;
+}
+
+.categoryright
+{
+    width:30%;
+    float:left;
+    
+}
+
+.categoryheader
+{
+    width: 60%;
+    font-size: xx-large;
+    font-family: Copperplate Gothic Bold;
+    color: #009900;
+}
+
+.sbutton
+{
+    border-radius: 5px;
+    background-color: ForestGreen;
+    color: #FFFFFF;
+}
+
+.adispmainleft
+{
+    width: 75%;
+    float: left;
+    border-right-style: dotted;
+    border-right-width: medium;
+    border-right-color: #C0C0C0;
+    margin-right: 10px;
+}
+
+.adispmainright
+{
+    float:left;
+    width:23%;
+}
+
+.adispauthor
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.cb
+{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.userlabel1
+{
+    font-size:large;
+    font-family: Copperplate Gothic Bold;
+    color:DarkKhaki;
+    text-align:center;
+}
+
+.sbutton2
+{
+    border-radius: 5px;
+    background-color: ForestGreen;
+    color: #FFFFFF;
+    
+}
+
+.marq
+{
+    margin-bottom:10px;
+    background-color:light Green;
+    border-style: ridge;
+    height: 78px;
+    width: 250px;
+}

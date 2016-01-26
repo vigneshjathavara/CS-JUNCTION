@@ -1,0 +1,91 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33573224-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Pages.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div style="float:left">
+                <img src="~/images/logo.jpg" alt="logo" runat="server" style="height: 68px; width: 75px"/>
+            </div>
+            <div class="title">
+               <h1>
+                    CS JUNCTION - Technology & Learning 
+                </h1>
+            &nbsp;</div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In or Register(free)</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/UserPage.aspx" Text="PROFILE PAGE" Font-Size="Medium" />
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Categories">
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=1" Text="C" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=2" Text="C++" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=3" Text="C#" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=4" Text="JAVA" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=5" Text="VISUAL BASIC" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=6" Text="ASP.NET" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=7" Text="PHP" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=8" Text="JAVASCRIPT" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=9" Text="CSS" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=10" Text="HTML" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=11" Text="NETWORKING" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=12" Text="WINDOWS" />
+                            <asp:MenuItem NavigateUrl="~/category.aspx?cid=13" Text="LINUX" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/neweditArticle/NewArticle.aspx" Text="Add Article" />
+                        <asp:MenuItem  Text="Ask A Question" NavigateUrl="~/neweditArticle/newquestion.aspx" />
+                        <asp:MenuItem Text="All Posts" NavigateUrl="~/allanq.aspx" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/feedback.aspx" Text="Feedback" />
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+    <div class="footer">
+        Website Designed and Developed By VIGNESH JATHAVAR vigneshjathavar@csjunction.in
+    </div>
+    </body>
+</html>
